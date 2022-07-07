@@ -2,6 +2,8 @@
 
 This plugin adds a [Picmo emoji picker](https://picmojs.com/) to Flex UI 2.x messaging.
 
+![Emoji picker demo](resources/demo.gif)
+
 ## Disclaimer
 
 **This software is to be considered "sample code", a Type B Deliverable, and is delivered "as-is" to the user. Twilio bears no responsibility to support the use or implementation of this software.**
