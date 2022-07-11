@@ -3,7 +3,7 @@ import * as Flex from "@twilio/flex-ui";
 import { EmojiWrapper } from "./EmojiPickerStyles";
 import FaceSmile from "../../icons/FaceSmile";
 import { createPopup } from "@picmo/popup-picker";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 let picker = null;
 
@@ -16,7 +16,7 @@ const EmojiInputAction = ({ conversationSid }) => {
   const [selectedEmoji, setSelectedEmoji] = useState(null);
 
   const inputState = useSelector(
-    (state) => state.EmojiPickerPlugin.messageInput.value
+    (state) => state.flex.chat.conversationInput[conversationSid].inputText
   );
 
   const addEmoji = (selectedEmoji) => {
