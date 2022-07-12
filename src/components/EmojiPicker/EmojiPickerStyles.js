@@ -13,4 +13,9 @@ button {
 	border:none;
 	cursor:pointer;
 }
+
+button:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
 `;

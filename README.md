@@ -1,6 +1,6 @@
 # Emoji Picker Flex Plugin
 
-This plugin adds a [Picmo emoji picker](https://picmojs.com/) to Flex UI 2.x messaging.
+This plugin adds a [PicMo emoji picker](https://picmojs.com/) to Flex UI 2.x messaging.
 
 ![Emoji picker demo](resources/demo.gif)
 

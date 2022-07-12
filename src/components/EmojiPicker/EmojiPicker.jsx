@@ -3,19 +3,19 @@ import * as Flex from "@twilio/flex-ui";
 import { EmojiWrapper } from "./EmojiPickerStyles";
 import FaceSmile from "../../icons/FaceSmile";
 import { createPopup } from "@picmo/popup-picker";
-import { useSelector } from "react-redux";
 
 let picker = null;
 
-/** This component uses Picmo, Copyright (c) 2019 Joe Attardi
+/** This component uses PicMo, Copyright (c) 2019 Joe Attardi
  *  See license text at https://github.com/joeattardi/picmo/blob/main/LICENSE
  */
 
-const EmojiInputAction = ({ conversationSid }) => {
+const EmojiInputAction = ({ conversationSid, disabledReason }) => {
   const buttonRef = useRef(null);
   const [selectedEmoji, setSelectedEmoji] = useState(null);
+  const [isDisabled, setIsDisabled] = useState(false);
 
-  const inputState = useSelector(
+  const inputState = Flex.useFlexSelector(
     (state) => state.flex.chat.conversationInput[conversationSid].inputText
   );
 
@@ -74,11 +74,19 @@ const EmojiInputAction = ({ conversationSid }) => {
     // reset in case user selects same emoji twice
     setSelectedEmoji(null);
   }, [selectedEmoji]);
+  
+  useEffect(() => {
+    if (!disabledReason || disabledReason == "Send Message") {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [disabledReason])
 
   // using a custom button as the Paste button causes the picker to dismiss immediately
   return (
     <EmojiWrapper>
-      <button onClick={togglePicker} ref={buttonRef}>
+      <button onClick={togglePicker} ref={buttonRef} disabled={isDisabled}>
         <FaceSmile />
       </button>
     </EmojiWrapper>
