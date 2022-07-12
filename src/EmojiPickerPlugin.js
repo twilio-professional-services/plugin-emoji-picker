@@ -1,6 +1,5 @@
 import React from "react";
 import { FlexPlugin } from "@twilio/flex-plugin";
-import { CustomizationProvider } from '@twilio-paste/core/customization';
 
 import EmojiPicker from "./components/EmojiPicker/EmojiPicker";
 
@@ -18,10 +17,6 @@ export default class EmojiPickerPlugin extends FlexPlugin {
    * @param flex { typeof import('@twilio/flex-ui') }
    */
   async init(flex, manager) {
-    flex.setProviders({
-      PasteThemeProvider: CustomizationProvider
-    });
-    
     flex.MessageInputActions.Content.add(
       <EmojiPicker key="EmojiPicker-component" />,
       {
