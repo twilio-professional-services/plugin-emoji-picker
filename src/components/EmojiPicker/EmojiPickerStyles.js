@@ -11,11 +11,16 @@ padding:5px;
 button {
 	background:none;
 	border:none;
+	color:inherit;
 	cursor:pointer;
 }
 
 button:disabled {
-	opacity: 0.4;
-	cursor: not-allowed;
+	opacity:0.4;
+	cursor:not-allowed;
+}
+
+button svg {
+	fill:currentColor;
 }
 `;
