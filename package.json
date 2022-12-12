@@ -6,17 +6,16 @@
     "postinstall": "flex-plugin pre-script-check"
   },
   "dependencies": {
+    "@twilio-paste/icons": "^9.2.0",
     "@picmo/popup-picker": "^5.2.0",
-    "@twilio-paste/core": "^10.14.0",
-    "@twilio-paste/icons": "^5.7.0",
-    "@twilio/flex-plugin-scripts": "5.1.2",
+    "@twilio/flex-plugin-scripts": "6.0.2",
     "picmo": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@twilio/flex-ui": "2.0.0-beta.1",
+    "@twilio/flex-ui": "^2",
     "react-test-renderer": "17.0.2"
   }
 }

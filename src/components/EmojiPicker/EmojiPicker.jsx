@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as Flex from "@twilio/flex-ui";
+import { EmojiIcon } from "@twilio-paste/icons/esm/EmojiIcon";
 import { EmojiWrapper } from "./EmojiPickerStyles";
-import FaceSmile from "../../icons/FaceSmile";
 import { createPopup } from "@picmo/popup-picker";
 
 let picker = null;
@@ -87,7 +87,7 @@ const EmojiInputAction = ({ conversationSid, disabledReason }) => {
   return (
     <EmojiWrapper>
       <button onClick={togglePicker} ref={buttonRef} disabled={isDisabled}>
-        <FaceSmile />
+        <EmojiIcon decorative={false} title="Insert emoji" />
       </button>
     </EmojiWrapper>
   );
