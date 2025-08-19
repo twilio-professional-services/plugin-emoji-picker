@@ -1,3 +1,7 @@
+# Notice - Legacy Code
+
+**This plugin is no longer maintained and has been migrated to the customizable [Flex Project Template](https://github.com/twilio-professional-services/flex-project-template), where it is an optional feature.**
+
 # Emoji Picker Flex Plugin
 
 This plugin adds a [PicMo emoji picker](https://picmojs.com/) to Flex UI 2.x messaging.
